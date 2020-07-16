@@ -140,23 +140,8 @@ model.compile(optimizer='adam',loss='mse', metrics=['accuracy'])
 
 history = model.fit_generator(train_generator,validation_data=validation_generator,epochs=10)
 
+#%%
+from keras.models import save_model,load_model
+save_model(model,'newCovidModel.h5')
+model.summary()
 
-from keras.models import save_model
-#save_model(model,'newCovidModel.h5')
-
-fig, ax = plt.subplots(2, 2, figsize=(10, 10))
-sns.lineplot(x=np.arange(1, 4), y=history.history.get('loss'), ax=ax[0, 0])
-sns.lineplot(x=np.arange(1, 4), y=history.history.get('accuracy'), ax=ax[0, 1])
-sns.lineplot(x=np.arange(1, 4), y=history.history.get('val_loss'), ax=ax[1, 0])
-sns.lineplot(x=np.arange(1, 4), y=history.history.get('val_accuracy'), ax=ax[1, 1])
-ax[0, 0].set_title('Training Loss vs Epochs')
-ax[0, 1].set_title('Training Accuracy vs Epochs')
-ax[1, 0].set_title('Validation Loss vs Epochs')
-ax[1, 1].set_title('Validation Accu vs Epochs')
-fig.suptitle('Base CNN model', size=16)
-plt.show()
-
-
-
-
-# %%
