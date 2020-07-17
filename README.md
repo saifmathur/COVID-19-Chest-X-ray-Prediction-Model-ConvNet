@@ -15,6 +15,10 @@ An accuracy of 95% was obtained with epoch values of 10 with a loss of 0.04
 
 ![image](https://user-images.githubusercontent.com/51125645/87615657-d25eb080-c730-11ea-933d-7c3e5c135f2b.png)
 
+<hr>
+
+![loss acc](https://user-images.githubusercontent.com/51125645/87784874-beac6a80-c854-11ea-8bb7-60c1e13b8376.png)
+
 
 <hr>
 <h1>Data Visualization</h1>
